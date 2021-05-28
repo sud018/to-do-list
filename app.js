@@ -38,7 +38,7 @@ const listSchema = {
 const List = mongoose.model("List", listSchema);
 
 app.get("/", function(req, res) {
-  let day = date.getDate();
+  // let day = date.getDate();
   Item.find({}, function(err, founditems) {
     if (founditems.length === 0) {
       Item.insertMany(defaultItems, function(err, items) {
